@@ -1,0 +1,25 @@
+<style>
+#results .address {
+	display: block;
+	font-size: 10px;
+	color: #999;
+}
+
+#results .distance {
+	font-size: 11px;
+	color: #333;
+}
+
+#results .distance:before {
+	content: " - ";
+	font-size: 11px;
+	color: #333;
+}
+</style>
+<div id='map'></div>
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_API_KEY'] %>&libraries=places,geometry"></script>
+<p>
+	<label>Search: <input type='text' name='s' id='search'></label>
+</p>
+<div id='results'>
+</div>
